@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  padding: 0 4%;
+}
+
+header {
+  padding: 15px 0;
+}
+nav {
+  /* background: #d87d7d; */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-right: 20px;
+}
+nav .mainMenu li {
+  padding: 15px;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: gray;
+  font-size: 1rem;
+  font-weight: 600;
+}
+nav .mainMenu li a:hover {
+  color: #09a8c3;
+}
+.openMenu i {
+  color: black;
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+
+nav .logo {
+  margin: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  background-color: #04a6c2;
+  color: #fff;
+  padding: 14px 30px;
+  font-weight: 300;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+/* ----------this is main content section start----------------- */
+.content-left-top h1 {
+  /* background: antiquewhite; */
+  font-size: 3rem;
+  font-weight: 600;
+  color: #2b2d42;
+  word-spacing: 0.5rem;
+  padding-left: 15px;
+  padding: 1rem 8px 1rem 1.8rem;
+  width: 85%;
+}
+
+section.main-content {
+  /* height: 70vh; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-content-left {
+  width: 50%;
+  /* background: blue; */
+}
+.left-middle-content {
+  display: flex;
+}
+
+.left-middle-content-section {
+  display: flex;
+  padding: 1rem;
+}
+
+.left-middle-content-icon i {
+  font-size: 1.3rem;
+  color: #04a6c2;
+  padding: 3px 10px 0px 3px;
+}
+.left-middle-content-content p {
+  padding-top: 6px;
+  color: gray;
+}
+.btn-1 a {
+  text-decoration: none;
+  background-color: #04a6c2;
+  color: #fff;
+  padding: 14px 30px;
+  font-weight: 300;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 2rem;
+}
+.content-left-middle {
+  padding: 0rem 0 1rem 0;
+}
+
+.main-content-right {
+  display: flex;
+  justify-content: center;
+}
+/* this is footer section  */
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 30px;
+}
+
+/* this is footer Section  */
+footer {
+  display: flex;
+  justify-content: end;
+  /*! gap: 5rem; */
+  padding: 10px 0;
+  text-align: center;
+  /* height: 15vh; */
+  align-items: end;
+}
+
+.counter span {
+  padding: 14px 0;
+  color: gray;
+}
+
+footer h1 .count,
+footer h1 {
+  color: #04a6c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div {
+  display: flex;
+}
+/* ---- responsive ---------- */
+@media only screen and (max-width: 480px) {
+  section.main-content {
+    flex-direction: column;
+  }
+  .main-content-left {
+    width: 100%;
+    /* background: blue; */
+  }
+  .left-middle-content {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+    display: block;
+  }
+  footer div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.main-content {
+    flex-direction: column;
+  }
+  .main-content-left {
+    width: 100%;
+    /* background: blue; */
+  }
+  .content-left-top h1 {
+    font-size: 1.4rem;
+  }
+  .main-content-right {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content-left-top h1 {
+    font-size: 2rem;
+  }
+  .left-middle-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+    font-size: 1.6rem;
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+@media only screen and (min-width: 992px) {
+}
